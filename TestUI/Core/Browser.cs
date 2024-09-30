@@ -15,7 +15,9 @@ public static class Browser
             case "edge":
                 return new EdgeDriver();
             default:
-                return new ChromeDriver();
+                var chromeOptions = new ChromeOptions();
+                chromeOptions.AddArguments("headless");
+                return new ChromeDriver(chromeOptions);
         }
     }
 }
