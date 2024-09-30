@@ -1,30 +1,29 @@
 ﻿using TestUI.Pages;
 
 namespace TestUI.Tests;
-
 public class LoginTests
 {
-    private Login LoginPage;
-    
+    private Login? _loginPage;
+
     [Test]
     public void LoginFailed()
     {
-        LoginPage = new Login();
-        LoginPage.InputUserName("");
-        LoginPage.InputPassword("");
-        LoginPage.ClickLoginButton();
-        LoginPage.ValidateFlashMessage("Your username is invalid!");
-        LoginPage.ClosePage();
+        _loginPage = new Login();
+        _loginPage.InputUserName("");
+        _loginPage.InputPassword("");
+        _loginPage.ClickLoginButton();
+        _loginPage.ValidateFlashMessage("Your username is invalid!");
+        _loginPage.ClosePage();
     }
     
     [Test]
     public void LoginSuccessful()
     {
-        LoginPage = new Login();
-        LoginPage.InputUserName("tomsmith");
-        LoginPage.InputPassword("SuperSecretPassword!");
-        LoginPage.ClickLoginButton();
-        LoginPage.ValidateFlashMessage("You logged into a secure area!");
-        LoginPage.ClosePage();
+        _loginPage = new Login();
+        _loginPage.InputUserName("tomsmith");
+        _loginPage.InputPassword("SuperSecretPassword!");
+        _loginPage.ClickLoginButton();
+        _loginPage.ValidateFlashMessage("You logged into a secure area!");
+        _loginPage.ClosePage();
     }
 }

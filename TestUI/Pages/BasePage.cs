@@ -14,7 +14,7 @@ public class BasePage
     {
         _driver.Navigate().GoToUrl(url);
     }
-    public void MaximizePage()
+    private void MaximizePage()
     {
         _driver.Manage().Window.Maximize();
     }

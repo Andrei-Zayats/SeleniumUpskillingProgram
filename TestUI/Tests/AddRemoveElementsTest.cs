@@ -1,26 +1,20 @@
 using TestUI.Pages;
 
 namespace TestUI.Tests;
-
 public class AddRemoveElementsTests
 {
-    private AddRemoveElements AddRemoveElementsPage;
-    
-    [SetUp]
-    public void Setup()
-    {
-    }
+    private AddRemoveElements? _addRemoveElementsPage;
 
     [Test]
     public void AddElementsTest()
     {
         const int elementsAmount = 5;
 
-        AddRemoveElementsPage = new AddRemoveElements();
-        AddRemoveElementsPage.PageIsLoaded();
-        AddRemoveElementsPage.AddNewElement(elementsAmount);
-        AddRemoveElementsPage.ValidateElementsAmount(elementsAmount);
-        AddRemoveElementsPage.ClosePage();
+        _addRemoveElementsPage = new AddRemoveElements();
+        _addRemoveElementsPage.PageIsLoaded();
+        _addRemoveElementsPage.AddNewElement(elementsAmount);
+        _addRemoveElementsPage.ValidateElementsAmount(elementsAmount);
+        _addRemoveElementsPage.ClosePage();
     }
     
     [Test]
@@ -29,16 +23,11 @@ public class AddRemoveElementsTests
         const int totalElementsAmount = 3;
         const int deleteElementsAmount = 2;
 
-        AddRemoveElementsPage = new AddRemoveElements();
-        AddRemoveElementsPage.PageIsLoaded();
-        AddRemoveElementsPage.AddNewElement(totalElementsAmount);
-        AddRemoveElementsPage.DeleteElement(deleteElementsAmount);
-        AddRemoveElementsPage.ValidateElementsAmount(totalElementsAmount - deleteElementsAmount);
-        AddRemoveElementsPage.ClosePage();
-    }
-
-    [TearDown]
-    public void TearDown()
-    {
+        _addRemoveElementsPage = new AddRemoveElements();
+        _addRemoveElementsPage.PageIsLoaded();
+        _addRemoveElementsPage.AddNewElement(totalElementsAmount);
+        _addRemoveElementsPage.DeleteElement(deleteElementsAmount);
+        _addRemoveElementsPage.ValidateElementsAmount(totalElementsAmount - deleteElementsAmount);
+        _addRemoveElementsPage.ClosePage();
     }
 }
