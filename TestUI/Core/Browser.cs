@@ -6,9 +6,9 @@ using OpenQA.Selenium.Firefox;
 namespace TestUI.Core;
 public static class Browser
 {
-    public static WebDriver GetWebDriver(string browserName)
+    public static WebDriver GetWebDriver()
     {
-        switch (browserName.ToLower())
+        switch (Environment.GetEnvironmentVariable("BROWSER")?.ToLower())
         {
             case "firefox":
                 return new FirefoxDriver();
