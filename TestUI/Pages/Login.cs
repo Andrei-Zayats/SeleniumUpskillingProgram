@@ -12,27 +12,27 @@ public class Login : BasePage
     
     public void PageIsLoaded()
     {
-        new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(d => _driver.FindElement(By.CssSelector("div button")));
+        new WebDriverWait(Driver, TimeSpan.FromSeconds(5)).Until(d => Driver.FindElement(By.CssSelector("div button")));
     }
 
     public void InputUserName(string userName)
     {
-        _driver.FindElement(By.CssSelector("#username")).SendKeys(userName);
+        Driver.FindElement(By.CssSelector("#username")).SendKeys(userName);
     }
     
     public void InputPassword(string password)
     {
-        _driver.FindElement(By.CssSelector("#password")).SendKeys(password);
+        Driver.FindElement(By.CssSelector("#password")).SendKeys(password);
     }
 
     public void ClickLoginButton()
     {
-        _driver.FindElement(By.XPath(".//*[@type='submit']")).Click();
+        Driver.FindElement(By.XPath(".//*[@type='submit']")).Click();
     }
     
     public void ValidateFlashMessage(string message)
     {
-        var flashMessage = _driver.FindElement(By.CssSelector("#flash"));
+        var flashMessage = Driver.FindElement(By.CssSelector("#flash"));
         StringAssert.Contains(message,flashMessage.Text, $"Expect '{message}' on page, but found '{flashMessage.Text}'");
     }
 }

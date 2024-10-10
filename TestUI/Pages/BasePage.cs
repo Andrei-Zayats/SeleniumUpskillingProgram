@@ -4,23 +4,23 @@ using TestUI.Core;
 namespace TestUI.Pages;
 public class BasePage
 {
-    protected IWebDriver _driver;
+    protected readonly IWebDriver Driver;
     protected BasePage()
     {
-        _driver = Browser.GetWebDriver();
+        Driver = Browser.GetWebDriver();
         MaximizePage();
     }
     protected void OpenUrl(string url)
     {
-        _driver.Navigate().GoToUrl(url);
+        Driver.Navigate().GoToUrl(url);
     }
     private void MaximizePage()
     {
-        _driver.Manage().Window.Maximize();
+        Driver.Manage().Window.Maximize();
     }
     public void ClosePage()
     {
-        _driver.Close();
-        _driver.Dispose();
+        Driver.Close();
+        Driver.Dispose();
     }
 }
