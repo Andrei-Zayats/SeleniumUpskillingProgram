@@ -1,6 +1,8 @@
 ﻿using TestUI.Pages;
 
 namespace TestUI.Tests;
+
+[Parallelizable(scope: ParallelScope.Fixtures)]
 public class LoginTests
 {
     private Login? _loginPage;
