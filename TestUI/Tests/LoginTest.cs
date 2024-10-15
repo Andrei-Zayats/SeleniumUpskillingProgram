@@ -2,7 +2,7 @@
 
 namespace TestUI.Tests;
 
-[Parallelizable(scope: ParallelScope.Fixtures)]
+[Parallelizable(scope: ParallelScope.All)]
 public class LoginTests
 {
     private Login? _loginPage;

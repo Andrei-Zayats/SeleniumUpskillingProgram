@@ -2,7 +2,7 @@ using TestUI.Pages;
 
 namespace TestUI.Tests;
 
-[Parallelizable(scope: ParallelScope.Fixtures)]
+[Parallelizable(scope: ParallelScope.All)]
 public class DragAndDropTests
 {
     private DragAndDrop? _dragAndDropPage;
