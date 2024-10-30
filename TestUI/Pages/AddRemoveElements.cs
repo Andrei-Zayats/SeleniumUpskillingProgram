@@ -22,11 +22,10 @@ public class AddRemoveElements : BasePage
     }
     public void DeleteElement(int count)
     {
-        var deleteButton = Driver.FindElements(By.CssSelector("#elements button"));
+        var deleteButtons = Driver.FindElements(By.CssSelector("#elements button"));
         for (int i = 0; i < count; i++)
         {
-            deleteButton[i].Click();
-            Assert.That(Driver.FindElements(By.CssSelector("#elements button")).Count, Is.EqualTo(count - i), $"Expect {count} elements on page, but found {deleteButton.Count}");
+            deleteButtons[i].Click();
         }
     }
     public void ValidateElementsAmount(int count)

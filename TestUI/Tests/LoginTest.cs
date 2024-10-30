@@ -2,30 +2,21 @@
 
 namespace TestUI.Tests;
 
-[Parallelizable(scope: ParallelScope.All)]
+[Parallelizable(scope: ParallelScope.Fixtures)]
 public class LoginTests
 {
     private Login? _loginPage;
 
-    [Test]
-    public void LoginFailed()
+    [TestCase("tomsmith", "SuperSecretPassword!", "You logged into a secure area!")]
+    [TestCase("tomsmith", "SecretPassword", "Your password is invalid!")]
+    [TestCase("tom", "SecretPassword", "Your username is invalid!")]
+    public void UserTryLogin(string userName, string userPassword, string expectedMessage)
     {
         _loginPage = new Login();
-        _loginPage.InputUserName("");
-        _loginPage.InputPassword("");
+        _loginPage.InputUserName(userName);
+        _loginPage.InputPassword(userPassword);
         _loginPage.ClickLoginButton();
-        _loginPage.ValidateFlashMessage("Your username is invalid!");
-        _loginPage.ClosePage();
-    }
-    
-    [Test]
-    public void LoginSuccessful()
-    {
-        _loginPage = new Login();
-        _loginPage.InputUserName("tomsmith");
-        _loginPage.InputPassword("SuperSecretPassword!");
-        _loginPage.ClickLoginButton();
-        _loginPage.ValidateFlashMessage("You logged into a secure area!");
+        _loginPage.ValidateFlashMessage(expectedMessage);
         _loginPage.ClosePage();
     }
 }
