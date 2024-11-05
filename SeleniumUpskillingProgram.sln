@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI", "TestUI\TestUI.csproj", "{9D72261B-0A0C-4762-A708-9C808C523305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestUI", "NUnitTestUI\NUnitTestUI.csproj", "{9D72261B-0A0C-4762-A708-9C808C523305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestUI", "SpecFlowTestUI\SpecFlowTestUI.csproj", "{FF7A73CC-C351-4335-B07F-7D4035448D4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{9D72261B-0A0C-4762-A708-9C808C523305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D72261B-0A0C-4762-A708-9C808C523305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D72261B-0A0C-4762-A708-9C808C523305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7A73CC-C351-4335-B07F-7D4035448D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7A73CC-C351-4335-B07F-7D4035448D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7A73CC-C351-4335-B07F-7D4035448D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7A73CC-C351-4335-B07F-7D4035448D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
