@@ -1,6 +1,7 @@
 # SeleniumUpskillingProgram
 
 ## UI tests
+Repository on [github](https://github.com/Andrei-Zayats/SeleniumUpskillingProgram)
 
 ### Technologies
 - .NET 6.0
