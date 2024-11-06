@@ -5,7 +5,7 @@ namespace SpecFlowTestUI.Steps;
 [Binding]
 public class UserTryLoginStepDefinitions
 {
-    private Login _loginPage;
+    private Login? _loginPage;
     
     [Given(@"user open login page")]
     public void GivenUserOpenLoginPage()
@@ -16,30 +16,30 @@ public class UserTryLoginStepDefinitions
     [Then(@"user close login page")]
     public void ThenUserClosePageLogin()
     {
-        _loginPage.ClosePage();
+        _loginPage?.ClosePage();
     }
 
     [Given(@"input user name (.*)")]
     public void GivenInputUserName(string userName)
     {
-        _loginPage.InputUserName(userName);
+        _loginPage?.InputUserName(userName);
     }
 
     [Given(@"input user password (.*)")]
     public void GivenInputUserPassword(string userPassword)
     {
-        _loginPage.InputPassword(userPassword);
+        _loginPage?.InputPassword(userPassword);
     }
 
     [When(@"click login button")]
     public void WhenClickLoginButton()
     {
-        _loginPage.ClickLoginButton();
+        _loginPage?.ClickLoginButton();
     }
 
     [Then(@"user get message (.*)")]
     public void ThenUserGetMessage(string expectedMessage)
     {
-        _loginPage.ValidateFlashMessage(expectedMessage);
+        _loginPage?.ValidateFlashMessage(expectedMessage);
     }
 }
