@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
 
-        <RootNamespace>TestUI</RootNamespace>
+        <RootNamespace>NUnitTestUI</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
