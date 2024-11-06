@@ -1,6 +1,6 @@
-﻿using TestUI.Pages;
+﻿using NUnitTestUI.Pages;
 
-namespace TestUI.Tests;
+namespace NUnitTestUI.Tests;
 
 [Parallelizable(scope: ParallelScope.Fixtures)]
 public class LoginTests

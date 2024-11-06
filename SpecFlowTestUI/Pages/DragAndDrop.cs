@@ -11,6 +11,7 @@ public class DragAndDrop : BasePage
     {
         OpenUrl("https://the-internet.herokuapp.com/drag_and_drop");
     }
+    
     public void PageIsLoaded()
     {
         new WebDriverWait(Driver, TimeSpan.FromSeconds(5)).Until(d => Driver.FindElement(By.Id("column-a")));

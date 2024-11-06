@@ -1,4 +1,5 @@
 Feature: LoginTest
+    User able login on page
 
 Scenario: User Try Login
 	Given user open login page

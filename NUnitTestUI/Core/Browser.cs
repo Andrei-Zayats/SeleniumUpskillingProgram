@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 
-namespace TestUI.Core;
+namespace NUnitTestUI.Core;
 public static class Browser
 {
     public static WebDriver GetWebDriver()

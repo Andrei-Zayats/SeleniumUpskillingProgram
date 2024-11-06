@@ -1,4 +1,5 @@
 Feature: AddRemoveElementsTests
+    User able add and remove elements on page
 
 Scenario: Add Elements On Page
 	Given user open Add Remove page

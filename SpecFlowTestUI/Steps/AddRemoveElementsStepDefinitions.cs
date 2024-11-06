@@ -5,7 +5,7 @@ namespace SpecFlowTestUI.Steps;
 [Binding]
 public class AddRemoveElementsStepDefinitions
 {
-    private AddRemoveElements? _addRemoveElementsPage;
+    private AddRemoveElements _addRemoveElementsPage;
     
     [Given(@"user open Add Remove page")]
     public void GivenUserOpenAddRemovePage()

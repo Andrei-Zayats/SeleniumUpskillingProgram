@@ -5,7 +5,7 @@ namespace SpecFlowTestUI.Steps;
 [Binding]
 public class UserTryLoginStepDefinitions
 {
-    private Login? _loginPage;
+    private Login _loginPage;
     
     [Given(@"user open login page")]
     public void GivenUserOpenLoginPage()

@@ -5,7 +5,7 @@ namespace SpecFlowTestUI.Steps;
 [Binding]
 public class DragAndDropStepDefinitions
 {
-    private DragAndDrop? _dragAndDropPage;
+    private DragAndDrop _dragAndDropPage;
     
     [Given(@"user open Drag And Drop page")]
     public void GivenUserOpenDragAndDropPage()

@@ -1,4 +1,5 @@
 Feature: DragAndDropTest
+    User able drag and drop elements on page
 
 Scenario: Drag And Drop Element On Page
 	Given user open Drag And Drop page

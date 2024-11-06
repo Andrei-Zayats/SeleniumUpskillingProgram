@@ -17,7 +17,7 @@ namespace SpecFlowTestUI.Drivers
                     return new EdgeDriver();
                 default:
                     var chromeOptions = new ChromeOptions();
-                    // chromeOptions.AddArguments("headless");
+                    chromeOptions.AddArguments("headless");
                     return new ChromeDriver(chromeOptions);
             }
         }

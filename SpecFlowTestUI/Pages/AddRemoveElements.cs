@@ -32,5 +32,6 @@ public class AddRemoveElements : BasePage
     public void ValidateElementsAmount(int count)
     {
         var deleteButton = Driver.FindElements(By.CssSelector("#elements button"));
+        deleteButton.Count.Should().Be(count);
     }
 }

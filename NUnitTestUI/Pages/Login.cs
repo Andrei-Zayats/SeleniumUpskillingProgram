@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace TestUI.Pages;
+namespace NUnitTestUI.Pages;
 
 public class Login : BasePage
 {
