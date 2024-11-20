@@ -1,3 +1,4 @@
+[![CI](https://github.com/Andrei-Zayats/SeleniumUpskillingProgram/actions/workflows/run-ui-tests.yml/badge.svg)](https://github.com/Andrei-Zayats/SeleniumUpskillingProgram/actions/workflows/run-ui-tests.yml)
 # SeleniumUpskillingProgram
 
 ## UI tests
